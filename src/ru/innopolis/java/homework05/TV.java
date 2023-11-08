@@ -1,4 +1,4 @@
-package ru.innopolis.java.homework03;
+package ru.innopolis.java.homework05;
 
 public class TV {
     private String brand;
@@ -37,14 +37,14 @@ public class TV {
         String display4kPointer = this.have4kDisplay ? "Yes" : "No";
         String isOnPointer = this.isOn ? "Yes" : "No";
         return String.format(
-                "Class name: %s%n" +
-                        "Brand: %s%n" +
-                        "Diagonal: %s%n" +
-                        "RefreshRate: %s%n" +
-                        "Have 4k display: %s%n" +
-                        "Active channel number: %s%n" +
-                        "Volume: %s%n" +
-                        "TV is on: %s%n",
+                    "Class name: %s%n" +
+                    "Brand: %s%n" +
+                    "Diagonal: %s%n" +
+                    "RefreshRate: %s%n" +
+                    "Have 4k display: %s%n" +
+                    "Active channel number: %s%n" +
+                    "Volume: %s%n" +
+                    "TV is on: %s%n",
                 className,
                 this.brand,
                 this.diagonal,
@@ -65,11 +65,11 @@ public class TV {
         }
         return
                 this.brand.equals(((TV) obj).brand) &&
-                        this.diagonal == ((TV) obj).diagonal &&
-                        this.refreshRate == ((TV) obj).refreshRate &&
-                        this.have4kDisplay == ((TV) obj).isHave4kDisplay() && this.activeChannelNumber == ((TV) obj).activeChannelNumber &&
-                        this.volume == ((TV) obj).volume &&
-                        this.isOn == ((TV) obj).isOn;
+                this.diagonal == ((TV) obj).diagonal &&
+                this.refreshRate == ((TV) obj).refreshRate &&
+                this.have4kDisplay == ((TV) obj).isHave4kDisplay() && this.activeChannelNumber == ((TV) obj).activeChannelNumber &&
+                this.volume == ((TV) obj).volume &&
+                this.isOn == ((TV) obj).isOn;
     }
 
     @Override
