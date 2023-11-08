@@ -1,4 +1,4 @@
-package main.java.firstHomework;
+package ru.innopolis.java.homework01;
 
 import java.util.Random;
 import java.util.Scanner;
