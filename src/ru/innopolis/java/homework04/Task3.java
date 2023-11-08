@@ -1,4 +1,4 @@
-package main.java.fourthHomework;
+package ru.innopolis.java.homework04;
 
 import java.util.Arrays;
 import java.util.Scanner;
