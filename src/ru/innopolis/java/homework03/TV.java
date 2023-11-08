@@ -1,4 +1,4 @@
-package main.java.thirdHomework;
+package ru.innopolis.java.homework03;
 
 public class TV {
     private String brand;
