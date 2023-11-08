@@ -1,4 +1,4 @@
-package main.java.secondHomework;
+package ru.innopolis.java.homework02;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
