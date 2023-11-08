@@ -1,6 +1,6 @@
 package ru.innopolis.java.homework05;
 
-public class TV {
+public class TVupgraded {
     private String brand;
     private int diagonal;
     private int refreshRate;
@@ -10,32 +10,32 @@ public class TV {
     private int volume;
     private boolean isOn;
 
-    public TV() {
+    public TVupgraded() {
     }
 
-    public TV (String brand,
-               int activeChannelNumber,
-               int volume,
-               boolean isOn) {
+    public TVupgraded(String brand,
+                      int activeChannelNumber,
+                      int volume,
+                      boolean isOn) {
         this.brand = brand;
         this.activeChannelNumber = activeChannelNumber;
         this.volume = volume;
         this.isOn = isOn;
     }
 
-    public TV(String brand,
-              int diagonal,
-              int refreshRate,
-              int volume,
-              boolean have4kDisplay) {
+    public TVupgraded(String brand,
+                      int diagonal,
+                      int refreshRate,
+                      int volume,
+                      boolean have4kDisplay) {
         this.brand = brand;
         this.diagonal = diagonal;
         this.refreshRate = refreshRate;
         this.volume = volume;
         this.have4kDisplay = have4kDisplay;
     }
-    public TV(String brand,
-              int diagonal) {
+    public TVupgraded(String brand,
+                      int diagonal) {
         this.brand = brand;
         this.diagonal = diagonal;
         this.refreshRate = 60;
@@ -55,7 +55,7 @@ public class TV {
                     "Have 4k display: %s%n" +
                     "Active channel number: %s%n" +
                     "Volume: %s%n" +
-                    "TV is on: %s%n",
+                    "TVupgraded is on: %s%n",
                 className,
                 this.brand,
                 this.diagonal,
@@ -75,12 +75,12 @@ public class TV {
             return false;
         }
         return
-                this.brand.equals(((TV) obj).brand) &&
-                this.diagonal == ((TV) obj).diagonal &&
-                this.refreshRate == ((TV) obj).refreshRate &&
-                this.have4kDisplay == ((TV) obj).isHave4kDisplay() && this.activeChannelNumber == ((TV) obj).activeChannelNumber &&
-                this.volume == ((TV) obj).volume &&
-                this.isOn == ((TV) obj).isOn;
+                this.brand.equals(((TVupgraded) obj).brand) &&
+                this.diagonal == ((TVupgraded) obj).diagonal &&
+                this.refreshRate == ((TVupgraded) obj).refreshRate &&
+                this.have4kDisplay == ((TVupgraded) obj).isHave4kDisplay() && this.activeChannelNumber == ((TVupgraded) obj).activeChannelNumber &&
+                this.volume == ((TVupgraded) obj).volume &&
+                this.isOn == ((TVupgraded) obj).isOn;
     }
 
     @Override
