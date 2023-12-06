@@ -3,12 +3,41 @@ package ru.innopolis.java.homework06;
 public class Product {
     private String name;
     private int price;
+
+    public Product () {
+        this.name = "untitled";
+        this.price = 0;
+    }
     public Product(String name, int price) {
-        if (name.isBlank()) {
-            throw new IllegalArgumentException("Имя не может быть пустым");
+        try {
+            Integer.parseInt(name);
+            throw new IllegalArgumentException("Имя не может содержать только цифры");
+        } catch (NumberFormatException ignored ) {
+            if (name.length() < 3) {
+                throw new IllegalArgumentException("Имя не может содержать менее трёх символов");
+            }
         }
-        if (price < 0) {
-            throw new IllegalArgumentException("Цена не может быть отрицательной");
+        if (price <= 0) {
+            throw new IllegalArgumentException("Цена не может быть ниже или равна нулю");
+        }
+        this.name = name;
+        this.price = price;
+    }
+
+    public Product (String allInfo) {
+        String[] strMas = allInfo.split("=");
+        String name = strMas[0].trim();
+        int price = Integer.parseInt(strMas[1].trim());
+        try {
+            Integer.parseInt(name);
+            throw new IllegalArgumentException("Имя не может содержать только цифры");
+        } catch (NumberFormatException ignored ) {
+            if (name.length() < 3) {
+                throw new IllegalArgumentException("Имя не может содержать менее трёх символов");
+            }
+        }
+        if (price <= 0) {
+            throw new IllegalArgumentException("Цена не может быть ниже или равна нулю");
         }
         this.name = name;
         this.price = price;
