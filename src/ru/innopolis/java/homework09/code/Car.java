@@ -31,53 +31,6 @@ public class Car {
         this.durability = durability;
     }
 
-    @Override
-    public String toString() {
-        return String.format(
-                "Mark: %s%n" +
-                "Model: %s%n" +
-                "Year of issue: %d%n" +
-                "Power: %d%n" +
-                "Acceleration: %d%n" +
-                "Suspension: %d%n" +
-                "Durability: %d%n",
-                mark, model, yearOfIssue,
-                power, acceleration,
-                suspension,durability
-        );
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null || getClass() != obj.getClass()) {
-            return false;
-        }
-        return
-                Objects.equals(mark, ((Car) obj).mark) &&
-                Objects.equals(model, ((Car) obj).model) &&
-                yearOfIssue == ((Car) obj).yearOfIssue &&
-                power == ((Car) obj).power &&
-                acceleration == ((Car) obj).acceleration &&
-                suspension == ((Car) obj).suspension &&
-                durability == ((Car) obj).durability;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = 31;
-        result = result * 17 + mark.hashCode();
-        result = result * 17 + model.hashCode();
-        result = result * 17 + yearOfIssue;
-        result = result * 17 + power;
-        result = result * 17 + acceleration;
-        result = result * 17 + suspension;
-        result = result * 17 + durability;
-        return result;
-    }
-
     public String getMark() {
         return mark;
     }
@@ -132,5 +85,54 @@ public class Car {
 
     public void setDurability(int durability) {
         this.durability = durability;
+    }
+
+    @Override
+    public String toString() {
+        String format;
+        format = String.format(
+                "Mark: %s%n" +
+                        "Model: %s%n" +
+                        "Year of issue: %d%n" +
+                        "Power: %d%n" +
+                        "Acceleration: %d%n" +
+                        "Suspension: %d%n" +
+                        "Durability: %d%n",
+                mark, model, yearOfIssue,
+                power, acceleration,
+                suspension, durability
+        );
+        return format;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        return
+                Objects.equals(mark, ((Car) obj).mark) &&
+                Objects.equals(model, ((Car) obj).model) &&
+                yearOfIssue == ((Car) obj).yearOfIssue &&
+                power == ((Car) obj).power &&
+                acceleration == ((Car) obj).acceleration &&
+                suspension == ((Car) obj).suspension &&
+                durability == ((Car) obj).durability;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 31;
+        result = result * 17 + mark.hashCode();
+        result = result * 17 + model.hashCode();
+        result = result * 17 + yearOfIssue;
+        result = result * 17 + power;
+        result = result * 17 + acceleration;
+        result = result * 17 + suspension;
+        result = result * 17 + durability;
+        return result;
     }
 }
