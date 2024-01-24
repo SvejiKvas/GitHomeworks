@@ -8,10 +8,10 @@ import java.util.Scanner;
 public class Garage {
     private Car[] parkedCars;
 
-    Garage () {
-        parkedCars = new Car[] {};
+    public Garage () {
+        parkedCars = new Car[2];
     }
-    Garage (Car[] parkedCars) {
+    public Garage (Car[] parkedCars) {
         this.parkedCars = parkedCars;
     }
 
