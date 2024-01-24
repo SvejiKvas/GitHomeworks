@@ -5,11 +5,11 @@ public class DriftRace extends Race{
         System.out.println("Дрифтовая гонка");
     }
 
-    DriftRace() {
+    public DriftRace() {
         this.route = "unnamed";
         this.participants = new Car[] {};
     }
-    DriftRace (int length, String route, int prizePool, Car[] participants) {
+    public DriftRace (int length, String route, int prizePool, Car[] participants) {
         super(length, route, prizePool, participants);
     }
 

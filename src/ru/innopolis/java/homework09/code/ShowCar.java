@@ -7,8 +7,8 @@ public class ShowCar extends Car{
     }
 
     private int stars;
-    ShowCar () {}
-    ShowCar (
+    public ShowCar () {}
+    public ShowCar (
             String mark,
             String model,
             int yearOfIssue,
@@ -27,6 +27,14 @@ public class ShowCar extends Car{
                 durability
         );
         stars = 0;
+    }
+
+    public int getStars() {
+        return stars;
+    }
+
+    public void setStars(int stars) {
+        this.stars = stars;
     }
 
     @Override
@@ -55,13 +63,5 @@ public class ShowCar extends Car{
         result = result * 17 + super.hashCode();
         result = result * 17 + stars;
         return result;
-    }
-
-    public int getStars() {
-        return stars;
-    }
-
-    public void setStars(int stars) {
-        this.stars = stars;
     }
 }

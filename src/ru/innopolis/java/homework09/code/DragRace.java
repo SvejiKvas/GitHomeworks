@@ -5,11 +5,11 @@ public class DragRace extends Race{
         System.out.println("Гонка за самый мощный двигатель. Идеальное переключениепередач — залог победы!");
     }
 
-    DragRace() {
+    public DragRace() {
         this.route = "unnamed";
         this.participants = new Car[] {};
     }
-    DragRace (int length, String route, int prizePool, Car[] participants) {
+    public DragRace (int length, String route, int prizePool, Car[] participants) {
         super(length, route, prizePool, participants);
     }
 

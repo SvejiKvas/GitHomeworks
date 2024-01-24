@@ -5,11 +5,11 @@ import java.util.Arrays;
 public class PerformanceCar extends Car{
     private String[] addOns;
 
-    PerformanceCar () {
+    public PerformanceCar () {
         this.addOns = new String[] {};
         upgradeStats();
     }
-    PerformanceCar (
+    public PerformanceCar (
             String mark,
             String model,
             int yearOfIssue,
@@ -29,6 +29,14 @@ public class PerformanceCar extends Car{
         );
         this.addOns = new String[] {};
         upgradeStats();
+    }
+
+    public String[] getAddOns() {
+        return addOns;
+    }
+
+    public void setAddOns(String[] addOns) {
+        this.addOns = addOns;
     }
 
     @Override
@@ -73,14 +81,6 @@ public class PerformanceCar extends Car{
         else {
             return "it's empty";
         }
-    }
-
-    public String[] getAddOns() {
-        return addOns;
-    }
-
-    public void setAddOns(String[] addOns) {
-        this.addOns = addOns;
     }
 
     private void upgradeStats() {

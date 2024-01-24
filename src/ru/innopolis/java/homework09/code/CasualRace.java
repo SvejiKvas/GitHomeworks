@@ -6,11 +6,11 @@ public class CasualRace extends Race {
         System.out.println("Обычная гонка");
     }
 
-    CasualRace() {
+    public CasualRace() {
         this.route = "unnamed";
         this.participants = new Car[] {};
     }
-    CasualRace (int length, String route, int prizePool, Car[] participants) {
+    public CasualRace (int length, String route, int prizePool, Car[] participants) {
         super(length, route, prizePool, participants);
     }
 

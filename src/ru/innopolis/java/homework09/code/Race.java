@@ -8,12 +8,12 @@
         int prizePool;
         Car[] participants;
 
-        Race() {
+        public Race() {
             this.route = "unnamed";
             this.participants = new Car[]{};
         }
 
-        Race(
+        public Race(
                 int length,
                 String route,
                 int prizePool,
@@ -22,6 +22,38 @@
             this.length = length;
             this.route = route;
             this.prizePool = prizePool;
+            this.participants = participants;
+        }
+
+        public void setLength(int length) {
+            this.length = length;
+        }
+
+        public int getLength() {
+            return length;
+        }
+
+        public void setRoute(String route) {
+            this.route = route;
+        }
+
+        public String getRoute() {
+            return route;
+        }
+
+        public void setPrizePool(int prizePool) {
+            this.prizePool = prizePool;
+        }
+
+        public int getPrizePool() {
+            return prizePool;
+        }
+
+        public Car[] getParticipants() {
+            return participants;
+        }
+
+        public void setParticipants(Car[] participants) {
             this.participants = participants;
         }
 
@@ -72,37 +104,5 @@
             else {
                 return "it's empty";
             }
-        }
-
-        public void setLength(int length) {
-            this.length = length;
-        }
-
-        public int getLength() {
-            return length;
-        }
-
-        public void setRoute(String route) {
-            this.route = route;
-        }
-
-        public String getRoute() {
-            return route;
-        }
-
-        public void setPrizePool(int prizePool) {
-            this.prizePool = prizePool;
-        }
-
-        public int getPrizePool() {
-            return prizePool;
-        }
-
-        public Car[] getParticipants() {
-            return participants;
-        }
-
-        public void setParticipants(Car[] participants) {
-            this.participants = participants;
         }
     }
